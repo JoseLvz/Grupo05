@@ -40,9 +40,9 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      intensity: 1
+      intensity: 2.29
       radius: 0.3
       sampleCount: 10
       downsampling: 1
@@ -94,16 +94,16 @@ MonoBehaviour:
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -8
+      logMin: -16
       logMax: 4
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.24
+        intensity: 0.47
         threshold: 1.1
-        softKnee: 0.434
-        radius: 1.15
+        softKnee: 0.335
+        radius: 5.22
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -322,9 +322,9 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.262
-      smoothness: 0.2
-      roundness: 1
+      intensity: 0.25
+      smoothness: 0.217
+      roundness: 0.871
       mask: {fileID: 0}
       opacity: 1
       rounded: 0

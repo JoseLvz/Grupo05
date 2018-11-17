@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Meteor_Movement : MonoBehaviour {
 
-    Rigidbody mRig;
+    float Rotation = 50f;
 
-	// Use this for initialization
-	void Start () {
-        gameObject.AddComponent<Rigidbody>();
-        mRig = GetComponent<Rigidbody>();
-        mRig.useGravity = false;
-        mRig.angularDrag = 0;
-        mRig.angularVelocity = Random.insideUnitSphere * 1;
+    Transform thistransform;
+    Vector3 randomRotation;
+
+    void Awake()
+    {
+        thistransform = transform;
+    }
+
+    void Start () {
+
+        randomRotation.x = Random.Range(-Rotation, Rotation);
+        randomRotation.y = Random.Range(-Rotation, Rotation);
+        randomRotation.z = Random.Range(-Rotation, Rotation);
+
     }
 	
-	// Update is called once per frame
 	void Update () {
 
+        thistransform.Rotate(randomRotation * Time.deltaTime);
     }
 
 }
