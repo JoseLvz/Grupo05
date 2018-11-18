@@ -1,34 +1,15 @@
 fileFormatVersion: 2
-guid: 0c295a89540d475438d4da39ac06027e
+guid: 60c6e189f8b727140bc450e33732ea8e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Square
-    100004: textureEditorIsolateSelectSet_Square
     400000: //RootNode
-    400002: Square
-    400004: textureEditorIsolateSelectSet_Square
-    2100000: SquareMat
-    2100002: textureEditorIsolateSelectSet_SquareMat
-    2300000: Square
-    2300002: textureEditorIsolateSelectSet_Square
-    3300000: Square
-    3300002: textureEditorIsolateSelectSet_Square
-    4300000: Square
-    4300002: textureEditorIsolateSelectSet_Square
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SquareMat
-    second: {fileID: 2100000, guid: 1ce94ef729f2927449ec83aec32ef8be, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: textureEditorIsolateSelectSet_SquareMat
-    second: {fileID: 2100000, guid: ea719d698316de744bb9ef9d9a037630, type: 2}
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
