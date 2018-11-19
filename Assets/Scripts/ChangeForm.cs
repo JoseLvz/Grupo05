@@ -48,14 +48,14 @@ public class ChangeForm : MonoBehaviour {
         {
             case 1:
                 ;
+                //cubo.Emit(1);
                 Nave.gameObject.SetActive(false);
                 Nave2.gameObject.SetActive(true);
                 S_remplazo.gameObject.SetActive(true);
-
-                //cubo.Emit(1);
                 break;
             case 2:
                 ;
+                //triangulo.Emit(1);
                 Nave3.gameObject.SetActive(true);
                 Nave2.gameObject.SetActive(false);
                 T_remplazo.gameObject.SetActive(true);
@@ -63,6 +63,7 @@ public class ChangeForm : MonoBehaviour {
                 break;
             case 3:
                 ;
+                //esfera.Emit(1);
                 Nave.gameObject.SetActive(true);
                 Nave3.gameObject.SetActive(false);
                 C_Collider.gameObject.SetActive(true);
@@ -70,11 +71,13 @@ public class ChangeForm : MonoBehaviour {
                 T_remplazo.gameObject.SetActive(false);
                 break;
             default:
+                //cubo.Emit(1);
                 selectedCharacter = 1;
                 Nave.gameObject.SetActive(false);
                 Nave2.gameObject.SetActive(true);
                 S_remplazo.gameObject.SetActive(true);
                 C_Collider.gameObject.SetActive(false);
+
                 break;
         }
 

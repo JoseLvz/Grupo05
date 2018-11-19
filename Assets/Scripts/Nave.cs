@@ -42,15 +42,21 @@ public class Nave : MonoBehaviour {
         H_movement = Input.GetAxis("Horizontal");
         V_Movement = Input.GetAxis("Vertical");
 
-        if (isDead == false)
+        if (life > 0)
         {
             Movement();
             Rotate();
             limits();
         }
+        else
+        {
+            DeadState();
+        }
 
 
-        DeadState();
+
+
+
 
         EndGame();
 
@@ -77,14 +83,12 @@ public class Nave : MonoBehaviour {
         }
     }
     void DeadState(){
-        if (life == 0f){
             isDead = true;
             Rig.constraints = RigidbodyConstraints.None;
             
             //Rig.AddForce(0, -1, 1, ForceMode.Impulse);
             //Vector3 RotationVel = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
             //Rig.angularVelocity = RotationVel;
-        }
     }
     void EndGame()
     {
