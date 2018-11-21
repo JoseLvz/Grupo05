@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ChangeForm : MonoBehaviour {
     int selectedCharacter = 1;
+    int i = 1;
     string characterName;
     public GameObject Nave, Nave2, Nave3;
     public MeshCollider C_Collider;
     public SphereCollider S_remplazo;
     public GameObject T_remplazo;
+
 
     /*public ParticleSystem cubo;
     public ParticleSystem triangulo;
@@ -36,6 +38,7 @@ public class ChangeForm : MonoBehaviour {
         {
             if (selectedCharacter < 4)
                 selectedCharacter++;
+                i++;
 
 
         }
@@ -82,6 +85,7 @@ public class ChangeForm : MonoBehaviour {
         }
 
     }
+
 
     /*IEnumerator stop()
     {

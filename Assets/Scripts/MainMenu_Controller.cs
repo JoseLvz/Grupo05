@@ -8,10 +8,6 @@ public class MainMenu_Controller : MonoBehaviour {
 
     public Image Transition;
 
-    private void Start()
-    {
-        Transition.canvasRenderer.SetAlpha(0.0f);
-    }
 
     public void PlayGame()
     {
@@ -25,10 +21,17 @@ public class MainMenu_Controller : MonoBehaviour {
 
     IEnumerator ChangeEscene()
     {
-        Transition.CrossFadeAlpha(1.0f, 1.5f, true);
+        Transition.canvasRenderer.SetAlpha(0.0f);
+
+        FadeIn();
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+    }
+
+    void FadeIn()
+    {
+        Transition.CrossFadeAlpha(1.0f, 1.5f, false);
     }
 
 
