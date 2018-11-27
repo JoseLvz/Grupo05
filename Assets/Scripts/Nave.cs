@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour {
 
-    public float speed = 2.7f;
+    float speed = 2.7f;
     public float Zspeed;
     public int life=3;
     float H_movement;
@@ -12,6 +12,8 @@ public class Nave : MonoBehaviour {
     public float Xmin, Xmax, Ymin, Ymax , Zmin , Zmax;
     public float zAngle = 90;
     public float RollSpeed;
+
+    float Rotation = 50f;
     
 
     private Rigidbody Rig;
@@ -26,6 +28,16 @@ public class Nave : MonoBehaviour {
 
     public Camera_Movement cam;
 
+    Transform thistransform;
+    Vector3 randomRotation;
+
+    bool isPause;
+
+    void Awake()
+    {
+        thistransform = transform;
+    }
+
 
     void Start() {
         isDead = false;
@@ -33,12 +45,20 @@ public class Nave : MonoBehaviour {
         Rig = GetComponent<Rigidbody>();
         InvokeRepeating("Acceleration",1,6);
         Physics.IgnoreLayerCollision(9, 10);
+
+        H_movement = Input.GetAxis("Horizontal");
+        V_Movement = Input.GetAxis("Vertical");
+
+        randomRotation.x = Random.Range(-Rotation, Rotation);
+        randomRotation.y = Random.Range(-Rotation, Rotation);
+        randomRotation.z = Random.Range(-Rotation, Rotation);
         /*Physics.IgnoreCollision(Player.GetComponent<Collider>(),HZ.GetComponent<Collider>());
         HZ = GameObject.FindGameObjectWithTag("Hazzard");*/
     }
 
     void Update() {
 
+        //H_movement = (isPause)? 0: Input.GetAxis("Horizontal");
         H_movement = Input.GetAxis("Horizontal");
         V_Movement = Input.GetAxis("Vertical");
 
@@ -85,10 +105,10 @@ public class Nave : MonoBehaviour {
     void DeadState(){
             isDead = true;
             Rig.constraints = RigidbodyConstraints.None;
+            thistransform.Rotate(randomRotation * Time.deltaTime);
 
         //Rig.AddForce(0, -1, 1, ForceMode.Impulse);
-        //Vector3 RotationVel = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
-        //Rig.angularVelocity = RotationVel;
+
     }
     void EndGame()
     {
