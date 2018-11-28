@@ -11,9 +11,8 @@ public class Nave : MonoBehaviour {
     float V_Movement;
     public float Xmin, Xmax, Ymin, Ymax , Zmin , Zmax;
     public float zAngle = 90;
-    public float RollSpeed;
 
-    float Rotation = 50f;
+
     
 
     private Rigidbody Rig;
@@ -32,6 +31,7 @@ public class Nave : MonoBehaviour {
     Vector3 randomRotation;
 
     bool isPause;
+    float Rotation = 50f;
 
     void Awake()
     {
@@ -40,6 +40,9 @@ public class Nave : MonoBehaviour {
 
 
     void Start() {
+
+        //FindObjectOfType<AudioManager>().Play("Motor");
+
         isDead = false;
         endGame = false;
         Rig = GetComponent<Rigidbody>();
@@ -66,21 +69,14 @@ public class Nave : MonoBehaviour {
         {
             Movement();
             Rotate();
-            limits();
+            Limits();
         }
         else
         {
             DeadState();
         }
 
-
-
-
-
-
         EndGame();
-
-        //Roll();
     }
 
     public void Movement() {
@@ -89,11 +85,7 @@ public class Nave : MonoBehaviour {
         //Rig.position += new Vector3(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,Zspeed*Time.deltaTime);
     }
 
-    public void Roll(){
-        Rig.rotation = Quaternion.Euler(Rig.velocity.y*-RollSpeed, 0, Rig.velocity.x * -RollSpeed);
-    }
-
-    public void limits(){
+    public void Limits(){
         Rig.position = new Vector3(Mathf.Clamp(Rig.position.x, Xmin, Xmax), Mathf.Clamp(Rig.position.y, Ymin, Ymax), Mathf.Clamp(Rig.position.z, Zmin, Zmax));
     }
 
