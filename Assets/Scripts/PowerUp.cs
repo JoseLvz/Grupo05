@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
+    float Rotation = 20f;
+
     public Nave nave;
-    Rigidbody pRig;
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    Vector3 randomRotation;
 
-        pRig = GetComponent<Rigidbody>();
-        pRig.useGravity = false;
-        pRig.angularDrag = 0;
-        pRig.angularVelocity = Random.insideUnitSphere * 0.5f;
+    void Start()
+    {
 
+        randomRotation.x = Random.Range(-Rotation, Rotation);
+        randomRotation.y = Random.Range(-Rotation, Rotation);
+        randomRotation.z = Random.Range(-Rotation, Rotation);
+
+    }
+
+    void Update()
+    {
+
+        transform.Rotate(randomRotation * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider obj)

@@ -431,68 +431,45 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 356.53003
+      value: 357.35
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0.0618169
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0.67289305
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0.049452197
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.7354918
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+    - target: {fileID: 4748770439250128, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 24.652542
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 24.652542
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 24.652542
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 84.95801
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -9.061001
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.606
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 114907795781181494, guid: ffe728b849bc0994b8e9babc163c8cd4,
+        type: 2}
+      propertyPath: nave
+      value: 
+      objectReference: {fileID: 1910611166}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4f8150f54d2afc046ad8db03955fc30a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ffe728b849bc0994b8e9babc163c8cd4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &81599425
 GameObject:
@@ -26316,14 +26293,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds:
-  - Name: Motor
-    clip: {fileID: 8300000, guid: 7f706f3f5e8fc974c9a4fdb06920a637, type: 3}
-    volume: 1
-    speed: 0.43
-    Space3D: 0.657
-    Distancia_Rango: 2
-    Spread: 48
-    loop: 1
+    Name: 
+    clips:
+    - {fileID: 0}
+    - {fileID: 0}
+    volume: 0
+    speed: 0
+    Space3D: 0
+    Distancia_Rango: 0
+    Spread: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1442213339
 Transform:
@@ -51339,7 +51318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa944195f68c7c48aeb944b598a7c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zspeed: 0
+  Zspeed: 4
   life: 3
   Xmin: -5
   Xmax: 5

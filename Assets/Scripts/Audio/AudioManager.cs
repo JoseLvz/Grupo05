@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
-    public Audio_Modelo[] Sounds;
+    public Audio_Modelo Sounds;
 
     public static AudioManager instance;
 
@@ -21,23 +21,30 @@ public class AudioManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        foreach (Audio_Modelo Audio in Sounds)
-        {
-            Audio.source = gameObject.AddComponent<AudioSource>();
 
-            Audio.source.clip = Audio.clip;
-            Audio.source.volume = Audio.volume;
-            Audio.source.pitch = Audio.speed;
-            Audio.source.spatialBlend = Audio.Space3D;
-            Audio.source.dopplerLevel = Audio.Distancia_Rango;
-            Audio.source.loop = Audio.loop;
-            Audio.source.spread = Audio.Spread;
-        }
+        Sounds.source = gameObject.AddComponent<AudioSource>();
+
+        Sounds.source.volume = Sounds.volume;
+        Sounds.source.pitch = Sounds.speed;
+        Sounds.source.spatialBlend = Sounds.Space3D;
+        Sounds.source.dopplerLevel = Sounds.Distancia_Rango;
+        Sounds.source.loop = Sounds.loop;
+        Sounds.source.spread = Sounds.Spread;
+      
+
     }
 
-    public void Play(string name)
+    public void Play()
     {
-        Audio_Modelo Audio = Array.Find(Sounds, sound => sound.Name == name);
-        Audio.source.Play();
+        // Audio_Modelo Audio = Array.Find(Sounds, sound => sound.Name == name);
+        Sounds.source.clip = Sounds.clips[UnityEngine.Random.Range(0, Sounds.clips.Length)];
+        Sounds.source.Play();
+    }
+
+    public void Pause() {
+        if (Sounds.source.isPlaying)
+            Sounds.source.Pause();
+        else
+            Sounds.source.Play();
     }
 }

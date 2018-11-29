@@ -8,7 +8,7 @@ public class Audio_Modelo {
 
     public string Name;
 
-    public AudioClip clip;
+    public AudioClip[] clips;
 
     [Range (0f,1f)]
     public float volume;

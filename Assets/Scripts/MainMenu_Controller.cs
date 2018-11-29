@@ -7,6 +7,15 @@ using UnityEngine.SceneManagement;
 public class MainMenu_Controller : MonoBehaviour {
 
     public Image Transition;
+    public Button button;
+
+
+
+    void Start()
+    {
+        button.Select();
+
+    }
 
 
     public void PlayGame()
@@ -26,6 +35,7 @@ public class MainMenu_Controller : MonoBehaviour {
         FadeIn();
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       
 
     }
 
