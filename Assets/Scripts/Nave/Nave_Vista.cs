@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nave_Vista : MonoBehaviour {
+public class Nave_Vista : Nave_Modelo {
 
 
     public Nave_Modelo modelo;
@@ -44,7 +44,7 @@ public class Nave_Vista : MonoBehaviour {
 
     public void OnDead(Rigidbody Rig )
     {
-        Rotate(modelo.randomRotation, modelo.Rotation);
+        Rotate(modelo.randomRotation, modelo.zRotation);
         modelo.isDead = true;
         Rig.constraints = RigidbodyConstraints.None;
         Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
