@@ -14,7 +14,7 @@ public class Nave_Vista : Nave_Modelo {
         Nave.Translate(H_Movement * Time.deltaTime * speed, V_Movement * Time.deltaTime * speed, Zspeed * Time.deltaTime);
     }
 
-    void Rotate(Vector3 _randomRotation, float _Rotation, Transform _Nave)
+    public static void Rotate(Vector3 _randomRotation, float _Rotation, Transform _Nave)
     {
         _randomRotation.x = Random.Range(-_Rotation, _Rotation);
         _randomRotation.y = Random.Range(-_Rotation, _Rotation);
@@ -44,7 +44,7 @@ public class Nave_Vista : Nave_Modelo {
 
     public void OnDead(Rigidbody Rig )
     {
-        Rotate(modelo.randomRotation, modelo.zRotation);
+        Rotate(modelo.randomRotation, modelo.zRotation , modelo.transform);
         modelo.isDead = true;
         Rig.constraints = RigidbodyConstraints.None;
         Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
