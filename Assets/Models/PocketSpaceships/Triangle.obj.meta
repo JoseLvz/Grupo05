@@ -8,10 +8,16 @@ ModelImporter:
     400000: Triangle
     400002: //RootNode
     2100000: blinn2SG
+    2100002: TriangleMat
     2300000: Triangle
     3300000: Triangle
     4300000: Triangle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TriangleMat
+    second: {fileID: 2100000, guid: b094e1c0dab07164588efd2e4594e3eb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

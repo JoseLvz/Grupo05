@@ -8,6 +8,7 @@ ModelImporter:
     400000: frameT
     400002: //RootNode
     2100000: initialShadingGroup
+    2100002: frameTMat
     2300000: frameT
     3300000: frameT
     4300000: frameT

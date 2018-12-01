@@ -8,11 +8,17 @@ ModelImporter:
     400000: Square
     400002: //RootNode
     2100000: blinn4SG
+    2100002: SquareMat
     2300000: Square
     3300000: Square
     4300000: Square
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SquareMat
+    second: {fileID: 2100000, guid: ea719d698316de744bb9ef9d9a037630, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
