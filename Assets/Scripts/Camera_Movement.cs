@@ -20,9 +20,9 @@ public class Camera_Movement : MonoBehaviour {
     [Range(0.01f, 0.50f)]
     public float rangeY;
     //new movement
-    Vector3 defaultDistance = new Vector3(0, 2, -8f);
+    Vector3 defaultDistance = new Vector3(0, 1.2f, -10f);
     public Vector3 velocity = Vector3.one;
-    [SerializeField] float distanceDamp = 0.15f;
+    [SerializeField] float distanceDamp = 0.85f;
 
 
     Transform cam;

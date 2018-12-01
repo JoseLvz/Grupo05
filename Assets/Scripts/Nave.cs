@@ -34,7 +34,7 @@ public class Nave : MonoBehaviour {
 
     void Start() {
 
-        //FindObjectOfType<AudioManager>().Play("Motor");
+        FindObjectOfType<AudioManager>().Play("Motor");
 
         isDead = false;
         endGame = false;
@@ -63,7 +63,7 @@ public class Nave : MonoBehaviour {
 
 
 
-        if (life > 0)
+        if (life >= 0)
         {
             Movement();
             Rotate();
