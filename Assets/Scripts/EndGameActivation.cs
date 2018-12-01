@@ -32,7 +32,7 @@ public class EndGameActivation : MonoBehaviour {
 
         FadeIn();
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //FadeOut();
     }
 

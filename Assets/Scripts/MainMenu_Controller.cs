@@ -34,7 +34,7 @@ public class MainMenu_Controller : MonoBehaviour {
 
         FadeIn();
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level1");
        
 
     }
