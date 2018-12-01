@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1473689819314110}
+  m_RootGameObject: {fileID: 1859100761083120}
   m_IsPrefabAsset: 1
---- !u!1 &1058850482656930
+--- !u!1 &1495638157495846
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4270467742680828}
-  - component: {fileID: 33944258864174436}
-  - component: {fileID: 23143181543937878}
+  - component: {fileID: 4225619675239716}
+  - component: {fileID: 33980115128734328}
+  - component: {fileID: 23085219403027080}
   m_Layer: 10
   m_Name: BarreraE3
   m_TagString: Untagged
@@ -28,31 +28,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1223191319898414
+--- !u!1 &1647283069359658
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4088694459090648}
-  - component: {fileID: 33105129230388940}
-  - component: {fileID: 23537806820557098}
+  - component: {fileID: 4866496214631386}
+  - component: {fileID: 33284197367867180}
+  - component: {fileID: 23281026542286814}
   m_Layer: 0
-  m_Name: frame_E2
+  m_Name: frame_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1443979213478566
+--- !u!1 &1858713917175618
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4162260395785430}
+  - component: {fileID: 4248022875152754}
   m_Layer: 0
   m_Name: PuertaE3
   m_TagString: Untagged
@@ -60,16 +60,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1473689819314110
+--- !u!1 &1859100761083120
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4759262237743686}
-  - component: {fileID: 64299406775044586}
-  - component: {fileID: 114798336144937940}
+  - component: {fileID: 4897191521521978}
+  - component: {fileID: 64346816048471554}
+  - component: {fileID: 114369095339447152}
   m_Layer: 10
   m_Name: BarreraE3
   m_TagString: Barrier
@@ -77,67 +77,67 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4088694459090648
+--- !u!4 &4225619675239716
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1223191319898414}
+  m_GameObject: {fileID: 1495638157495846}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4162260395785430}
+  m_Father: {fileID: 4897191521521978}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4162260395785430
+--- !u!4 &4248022875152754
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443979213478566}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7790467, w: 0.62696594}
-  m_LocalPosition: {x: 6.9000006, y: 4.325, z: -0.032491684}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1858713917175618}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38851598, w: 0.92144203}
+  m_LocalPosition: {x: 6.1080093, y: -4.412, z: 0.56799316}
+  m_LocalScale: {x: 1.965138, y: 1.965138, z: 1.9651374}
   m_Children:
-  - {fileID: 4088694459090648}
-  m_Father: {fileID: 4759262237743686}
+  - {fileID: 4866496214631386}
+  m_Father: {fileID: 4897191521521978}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 102.34701}
---- !u!4 &4270467742680828
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.724003}
+--- !u!4 &4866496214631386
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1058850482656930}
+  m_GameObject: {fileID: 1647283069359658}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 4759262237743686}
+  m_Father: {fileID: 4248022875152754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4759262237743686
+--- !u!4 &4897191521521978
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1473689819314110}
+  m_GameObject: {fileID: 1859100761083120}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 161.9}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0, z: -84.2}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
-  - {fileID: 4270467742680828}
-  - {fileID: 4162260395785430}
+  - {fileID: 4225619675239716}
+  - {fileID: 4248022875152754}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23143181543937878
+--- !u!23 &23085219403027080
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1058850482656930}
+  m_GameObject: {fileID: 1495638157495846}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -167,12 +167,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23537806820557098
+--- !u!23 &23281026542286814
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1223191319898414}
+  m_GameObject: {fileID: 1647283069359658}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -202,26 +202,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33105129230388940
+--- !u!33 &33284197367867180
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1223191319898414}
-  m_Mesh: {fileID: 4300000, guid: f72e8be952c96ab4ba5be302bbe8694c, type: 3}
---- !u!33 &33944258864174436
+  m_GameObject: {fileID: 1647283069359658}
+  m_Mesh: {fileID: 4300000, guid: 63fb45128423bc6459a7f9b94aaaff63, type: 3}
+--- !u!33 &33980115128734328
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1058850482656930}
-  m_Mesh: {fileID: 4300000, guid: 16991f2699b75534aa8b80091d706b5c, type: 3}
---- !u!64 &64299406775044586
+  m_GameObject: {fileID: 1495638157495846}
+  m_Mesh: {fileID: 4300000, guid: b1241b3fb106e5947b2d69b67dac63fa, type: 3}
+--- !u!64 &64346816048471554
 MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1473689819314110}
+  m_GameObject: {fileID: 1859100761083120}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -229,17 +229,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 16991f2699b75534aa8b80091d706b5c, type: 3}
---- !u!114 &114798336144937940
+  m_Mesh: {fileID: 4300000, guid: b1241b3fb106e5947b2d69b67dac63fa, type: 3}
+--- !u!114 &114369095339447152
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1473689819314110}
+  m_GameObject: {fileID: 1859100761083120}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aa7d0bc4f605034a89af580ca919c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RedFail: {fileID: 2100000, guid: da623f64ad2adf94d8d9e583360bc6a9, type: 2}
-  Barrier: {fileID: 0}
+  Barrier: {fileID: 1859100761083120}

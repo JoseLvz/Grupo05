@@ -6,13 +6,20 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
-    public Audio_Modelo Sounds;
+    public Audio_Modelo[] Sounds;
+
+    [HideInInspector]
+    public AudioSource source2;
+
+    public AudioClip[] music;
+
+    
 
     public static AudioManager instance;
 
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -21,30 +28,59 @@ public class AudioManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        DontDestroyOnLoad(gameObject);
 
-        Sounds.source = gameObject.AddComponent<AudioSource>();
+        foreach (Audio_Modelo Audio in Sounds)
+        {
+            Audio.source = gameObject.AddComponent<AudioSource>();
 
-        Sounds.source.volume = Sounds.volume;
-        Sounds.source.pitch = Sounds.speed;
-        Sounds.source.spatialBlend = Sounds.Space3D;
-        Sounds.source.dopplerLevel = Sounds.Distancia_Rango;
-        Sounds.source.loop = Sounds.loop;
-        Sounds.source.spread = Sounds.Spread;
-      
+            Audio.source.clip = Audio.clip;
+            Audio.source.volume = Audio.volume;
+            Audio.source.pitch = Audio.speed;
+            Audio.source.spatialBlend = Audio.Space3D;
+            Audio.source.dopplerLevel = Audio.Distancia_Rango;
+            Audio.source.loop = Audio.loop;
+            Audio.source.spread = Audio.Spread;
+        }
+
+        source2 = gameObject.AddComponent<AudioSource>();
+
+
 
     }
 
-    public void Play()
+
+    public void Play(string name)
+    {
+        Audio_Modelo Audio = Array.Find(Sounds, sound => sound.Name == name);
+        Audio.source.Play();
+    }
+
+
+    public void PlaySong()
     {
         // Audio_Modelo Audio = Array.Find(Sounds, sound => sound.Name == name);
-        Sounds.source.clip = Sounds.clips[UnityEngine.Random.Range(0, Sounds.clips.Length)];
-        Sounds.source.Play();
+        source2.clip = music[UnityEngine.Random.Range(0, music.Length)];
+        source2.Play();
     }
 
-    public void Pause() {
-        if (Sounds.source.isPlaying)
-            Sounds.source.Pause();
+    public void Pause()
+    {
+        if (source2.isPlaying)
+            source2.Pause();
         else
-            Sounds.source.Play();
+            source2.Play();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M)){
+            PlaySong();
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Pause();
+        }
+    }
+
 }

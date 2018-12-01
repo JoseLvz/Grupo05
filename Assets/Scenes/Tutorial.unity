@@ -26293,10 +26293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds:
-    Name: 
-    clips:
-    - {fileID: 0}
-    - {fileID: 0}
+  - Name: 
+    clip: {fileID: 0}
     volume: 0
     speed: 0
     Space3D: 0
@@ -26304,6 +26302,11 @@ MonoBehaviour:
     Spread: 0
     loop: 0
     source: {fileID: 0}
+  source2: {fileID: 0}
+  music:
+  - {fileID: 8300000, guid: dc204021ee0592846a0fcc2ec40483fc, type: 3}
+  - {fileID: 8300000, guid: 06be7af9ce2e2844885443ed7f24a1b0, type: 3}
+  - {fileID: 8300000, guid: 08d94d0cb57f26c46a48d10d10798f41, type: 3}
 --- !u!4 &1442213339
 Transform:
   m_ObjectHideFlags: 0

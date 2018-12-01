@@ -15,7 +15,7 @@ public class Nave : MonoBehaviour {
 
     
 
-    private Rigidbody Rig;
+    Rigidbody Rig;
     //public CameraShake C_Shake;
     /*public Transform Player;
     GameObject HZ;*/
@@ -26,17 +26,10 @@ public class Nave : MonoBehaviour {
     public Transform allColliders;
 
     public Camera_Movement cam;
-
-    Transform thistransform;
     Vector3 randomRotation;
 
     bool isPause;
-    float Rotation = 50f;
-
-    void Awake()
-    {
-        thistransform = transform;
-    }
+    float RotationSpeed = 50f;
 
 
     void Start() {
@@ -52,9 +45,12 @@ public class Nave : MonoBehaviour {
         H_movement = Input.GetAxis("Horizontal");
         V_Movement = Input.GetAxis("Vertical");
 
-        randomRotation.x = Random.Range(-Rotation, Rotation);
-        randomRotation.y = Random.Range(-Rotation, Rotation);
-        randomRotation.z = Random.Range(-Rotation, Rotation);
+
+        randomRotation.x = Random.Range(-RotationSpeed, RotationSpeed);
+        randomRotation.y = Random.Range(-RotationSpeed, RotationSpeed);
+        randomRotation.z = Random.Range(-RotationSpeed, RotationSpeed);
+
+
         /*Physics.IgnoreCollision(Player.GetComponent<Collider>(),HZ.GetComponent<Collider>());
         HZ = GameObject.FindGameObjectWithTag("Hazzard");*/
     }
@@ -64,6 +60,8 @@ public class Nave : MonoBehaviour {
         //H_movement = (isPause)? 0: Input.GetAxis("Horizontal");
         H_movement = Input.GetAxis("Horizontal");
         V_Movement = Input.GetAxis("Vertical");
+
+
 
         if (life > 0)
         {
@@ -95,11 +93,12 @@ public class Nave : MonoBehaviour {
         }
     }
     void DeadState(){
-            isDead = true;
-            Rig.constraints = RigidbodyConstraints.None;
-            thistransform.Rotate(randomRotation * Time.deltaTime);
+        isDead = true;
+        Rig.constraints = RigidbodyConstraints.None;
+        transform.Rotate(randomRotation * Time.deltaTime);
 
-        //Rig.AddForce(0, -1, 1, ForceMode.Impulse);
+        Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
+        allColliders.gameObject.SetActive(false);
 
     }
     void EndGame()

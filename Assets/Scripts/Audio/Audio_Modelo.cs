@@ -8,7 +8,9 @@ public class Audio_Modelo {
 
     public string Name;
 
-    public AudioClip[] clips;
+    public AudioClip clip;
+
+
 
     [Range (0f,1f)]
     public float volume;
@@ -25,4 +27,5 @@ public class Audio_Modelo {
 
     [HideInInspector]
     public AudioSource source;
+
 }
