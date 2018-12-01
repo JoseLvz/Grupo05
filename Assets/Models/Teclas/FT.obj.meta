@@ -5,12 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: ft
+    100004: pPlane1
     400000: //RootNode
     400002: ft
+    400004: pPlane1
     2100000: ftMat
+    2100002: pPlane1Mat
     2300000: ft
+    2300002: pPlane1
     3300000: ft
+    3300002: pPlane1
     4300000: ft
+    4300002: pPlane1
   externalObjects: {}
   materials:
     importMaterials: 1
