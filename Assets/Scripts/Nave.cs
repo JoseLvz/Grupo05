@@ -63,7 +63,7 @@ public class Nave : MonoBehaviour {
 
 
 
-        if (life >= 0)
+        if (life > 0)
         {
             Movement();
             Rotate();
@@ -99,6 +99,8 @@ public class Nave : MonoBehaviour {
 
         Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
         allColliders.gameObject.SetActive(false);
+
+        FindObjectOfType<AudioManager>().StopVFX("Motor");
 
     }
     void EndGame()

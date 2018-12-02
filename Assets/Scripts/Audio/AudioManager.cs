@@ -56,6 +56,12 @@ public class AudioManager : MonoBehaviour {
         Audio.source.Play();
     }
 
+    public void StopVFX(string name)
+    {
+        Audio_Modelo Audio = Array.Find(Sounds, sound => sound.Name == name);
+        Audio.source.Pause();
+    }
+
 
     public void PlaySong()
     {
