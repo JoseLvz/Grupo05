@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
-    float Rotation = 20f;
-
+    public Transform target;
     public Nave nave;
     Vector3 randomRotation;
 
     void Start()
     {
 
-        randomRotation.x = Random.Range(-Rotation, Rotation);
-        randomRotation.y = Random.Range(-Rotation, Rotation);
-        randomRotation.z = Random.Range(-Rotation, Rotation);
+
+        nave = FindObjectOfType<Nave>();
+        target = GameObject.FindWithTag("Player").transform;
+
 
     }
 
     void Update()
-    {
-
-        transform.Rotate(randomRotation * Time.deltaTime);
+    {   
+        transform.LookAt(target);
     }
 
     private void OnTriggerEnter(Collider obj)
@@ -29,8 +28,8 @@ public class PowerUp : MonoBehaviour {
         if (obj.gameObject.CompareTag("nonPlayer"))
         {
             nave.life++;
+            FindObjectOfType<AudioManager>().Play("Heal");
             Destroy(this.gameObject);
-        }
-        
+        }        
     }
 }

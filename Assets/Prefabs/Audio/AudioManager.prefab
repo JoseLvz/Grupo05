@@ -54,15 +54,62 @@ MonoBehaviour:
   Sounds:
   - Name: Motor
     clip: {fileID: 8300000, guid: 7f706f3f5e8fc974c9a4fdb06920a637, type: 3}
-    volume: 0.5
+    volume: 0.4
     speed: -0.3
     Space3D: 0.275
     Distancia_Rango: 3.53
-    Spread: 0
+    MaxRango: 0
     loop: 1
+    source: {fileID: 0}
+  - Name: Impact_Meteor
+    clip: {fileID: 8300000, guid: f3361c23b6dc38b43a5004ef8b54006c, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0.316
+    Distancia_Rango: 1.61
+    MaxRango: 0
+    loop: 0
+    source: {fileID: 0}
+  - Name: Impact_Barrier
+    clip: {fileID: 8300000, guid: 65176fa882ffcfe4d9d1e791432eb3d3, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0.273
+    Distancia_Rango: 1.61
+    MaxRango: 0
+    loop: 0
+    source: {fileID: 0}
+  - Name: Heal
+    clip: {fileID: 8300000, guid: 367198d1c1314904999f26be8f9cee20, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0
+    Distancia_Rango: 0.39
+    MaxRango: 0
+    loop: 0
+    source: {fileID: 0}
+  - Name: Theme
+    clip: {fileID: 8300000, guid: 0aa0ef1dfd313ad42aa966f5553909b5, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0
+    Distancia_Rango: 0.39
+    MaxRango: 0
+    loop: 1
+    source: {fileID: 0}
+  - Name: Lose
+    clip: {fileID: 8300000, guid: bebcb309128e9c4428257b94d283be00, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0
+    Distancia_Rango: 0.39
+    MaxRango: 0
+    loop: 0
     source: {fileID: 0}
   source2: {fileID: 0}
   music:
-  - {fileID: 8300000, guid: dc204021ee0592846a0fcc2ec40483fc, type: 3}
-  - {fileID: 8300000, guid: 06be7af9ce2e2844885443ed7f24a1b0, type: 3}
   - {fileID: 8300000, guid: 08d94d0cb57f26c46a48d10d10798f41, type: 3}
+  - {fileID: 8300000, guid: 06be7af9ce2e2844885443ed7f24a1b0, type: 3}
+  - {fileID: 8300000, guid: 585edbbbacb3bd645ac2c63fbb89598c, type: 3}
+  - {fileID: 8300000, guid: b6ae01b1fdbce04449264d3934458537, type: 3}
+  volume: 0.5

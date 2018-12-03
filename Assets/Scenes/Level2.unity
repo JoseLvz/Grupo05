@@ -3961,6 +3961,26 @@ Prefab:
       propertyPath: m_Name
       value: Vida (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114300854235832754, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: nave
+      value: 
+      objectReference: {fileID: 1910611166}
+    - target: {fileID: 114300854235832754, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1910611165}
+    - target: {fileID: 114711765374644094, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: nave
+      value: 
+      objectReference: {fileID: 1910611166}
+    - target: {fileID: 114711765374644094, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1910611165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e006307ba101e9e4bbea5c1dc5b2d0d2, type: 2}
   m_IsPrefabAsset: 0
@@ -6469,7 +6489,7 @@ Prefab:
     - target: {fileID: 114771105991754654, guid: de71e61f1851b084fbf9f80b32d2523d,
         type: 2}
       propertyPath: Zspeed
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de71e61f1851b084fbf9f80b32d2523d, type: 2}
@@ -8482,7 +8502,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4931651552254064, guid: 32f0a87fe0d4c954080cf1ddaa2f5efc, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 43.5
+      value: 54.55
       objectReference: {fileID: 0}
     - target: {fileID: 4931651552254064, guid: 32f0a87fe0d4c954080cf1ddaa2f5efc, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11821,6 +11841,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114300854235832754, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1910611165}
+    - target: {fileID: 114300854235832754, guid: e006307ba101e9e4bbea5c1dc5b2d0d2,
+        type: 2}
+      propertyPath: nave
+      value: 
+      objectReference: {fileID: 1910611166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e006307ba101e9e4bbea5c1dc5b2d0d2, type: 2}
   m_IsPrefabAsset: 0

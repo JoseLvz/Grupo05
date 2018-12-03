@@ -14,28 +14,34 @@ public class MainMenu_Controller : MonoBehaviour {
     void Start()
     {
         button.Select();
-
+        FindObjectOfType<AudioManager>().Play("Theme");
     }
 
 
     public void PlayGame()
     {
+        SceneManager.LoadScene("Level1");
         StartCoroutine(ChangeEscene());
+        FindObjectOfType<AudioManager>().StopVFX("Theme");
+        FindObjectOfType<AudioManager>().Play("Motor");
+
     }
 
     public void PlayTutorial()
     {
         SceneManager.LoadScene("Tutorial");
+        FindObjectOfType<AudioManager>().StopVFX("Theme");
     }
 
     IEnumerator ChangeEscene()
     {
         Transition.canvasRenderer.SetAlpha(0.0f);
 
+
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<AudioManager>().Play("Motor");
         FadeIn();
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level1");
-       
+
 
     }
 

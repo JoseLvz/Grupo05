@@ -7,8 +7,6 @@ public class EstrellasVelocidad : MonoBehaviour {
 	public Transform target;
 
 	public Vector3 DistancePos;
-	bool LlamarAFelipe = false;
-	int habilidaddeprogramadordeJose;
 
 
 	// Use this for initialization

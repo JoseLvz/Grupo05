@@ -31,10 +31,15 @@ public class Nave : MonoBehaviour {
     bool isPause;
     float RotationSpeed = 50f;
 
+    private void Awake()
+    {
+        FindObjectOfType<AudioManager>().Play("Motor");
+    }
 
     void Start() {
 
-        FindObjectOfType<AudioManager>().Play("Motor");
+
+
 
         isDead = false;
         endGame = false;
@@ -50,9 +55,6 @@ public class Nave : MonoBehaviour {
         randomRotation.y = Random.Range(-RotationSpeed, RotationSpeed);
         randomRotation.z = Random.Range(-RotationSpeed, RotationSpeed);
 
-
-        /*Physics.IgnoreCollision(Player.GetComponent<Collider>(),HZ.GetComponent<Collider>());
-        HZ = GameObject.FindGameObjectWithTag("Hazzard");*/
     }
 
     void Update() {
@@ -93,13 +95,14 @@ public class Nave : MonoBehaviour {
         }
     }
     void DeadState(){
+        life = 0;
         isDead = true;
         Rig.constraints = RigidbodyConstraints.None;
         transform.Rotate(randomRotation * Time.deltaTime);
+        FindObjectOfType<AudioManager>().Play("Lose");
 
         Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
         allColliders.gameObject.SetActive(false);
-
         FindObjectOfType<AudioManager>().StopVFX("Motor");
 
     }
@@ -117,6 +120,7 @@ public class Nave : MonoBehaviour {
             life -= 1;
             cam.shake = true;
             BackColliders();
+            FindObjectOfType<AudioManager>().Play("Impact_Meteor");
         }
         StartCoroutine(BackColliders());
     }
@@ -126,8 +130,8 @@ public class Nave : MonoBehaviour {
         {
             life -= 1;
             allColliders.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("Impact_Barrier");
             cam.shake = true;
-
         }
         StartCoroutine(BackColliders());
     }

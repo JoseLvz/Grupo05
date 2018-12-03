@@ -8,12 +8,15 @@ public class AudioManager : MonoBehaviour {
 
     public Audio_Modelo[] Sounds;
 
+
+
     [HideInInspector]
     public AudioSource source2;
 
     public AudioClip[] music;
 
-    
+    [Range(0,1)]
+    public float volume;
 
     public static AudioManager instance;
 
@@ -30,6 +33,8 @@ public class AudioManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 
+
+
         foreach (Audio_Modelo Audio in Sounds)
         {
             Audio.source = gameObject.AddComponent<AudioSource>();
@@ -40,10 +45,11 @@ public class AudioManager : MonoBehaviour {
             Audio.source.spatialBlend = Audio.Space3D;
             Audio.source.dopplerLevel = Audio.Distancia_Rango;
             Audio.source.loop = Audio.loop;
-            Audio.source.spread = Audio.Spread;
         }
 
+
         source2 = gameObject.AddComponent<AudioSource>();
+        source2.volume = volume;
 
 
 

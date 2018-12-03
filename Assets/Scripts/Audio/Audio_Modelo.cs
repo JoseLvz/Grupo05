@@ -20,8 +20,8 @@ public class Audio_Modelo {
     public float Space3D;
     [Range(0f, 5f)]
     public float Distancia_Rango;
-    [Range(0f, 360f)]
-    public float Spread;
+    [Range(0f, 600f)]
+    public float MaxRango;
 
     public bool loop;
 

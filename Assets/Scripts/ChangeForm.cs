@@ -11,6 +11,8 @@ public class ChangeForm : MonoBehaviour {
     public SphereCollider S_remplazo;
     public GameObject T_remplazo;
 
+    //public GameObject[] Effetcs;
+
 
     /*public ParticleSystem cubo;
     public ParticleSystem triangulo;
