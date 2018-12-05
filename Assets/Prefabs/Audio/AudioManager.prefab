@@ -90,7 +90,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - Name: Theme
     clip: {fileID: 8300000, guid: 0aa0ef1dfd313ad42aa966f5553909b5, type: 3}
-    volume: 1
+    volume: 0.5
     speed: 1
     Space3D: 0
     Distancia_Rango: 0.39
@@ -112,4 +112,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06be7af9ce2e2844885443ed7f24a1b0, type: 3}
   - {fileID: 8300000, guid: 585edbbbacb3bd645ac2c63fbb89598c, type: 3}
   - {fileID: 8300000, guid: b6ae01b1fdbce04449264d3934458537, type: 3}
+  - {fileID: 8300000, guid: f4a51113ea5a34a4d89a4881630cce11, type: 3}
   volume: 0.5

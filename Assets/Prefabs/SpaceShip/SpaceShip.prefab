@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 114807385207924020}
   m_Layer: 9
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: nonPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 114971638619988306}
   m_Layer: 9
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: nonPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 114166908981612278}
   m_Layer: 9
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: nonPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4464,12 +4464,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa944195f68c7c48aeb944b598a7c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zspeed: 7
+  Zspeed: 11
   life: 3
-  Xmin: -5
-  Xmax: 5
-  Ymin: -5
-  Ymax: 5
+  Xmin: -5.5
+  Xmax: 5.5
+  Ymin: -5.5
+  Ymax: 5.5
   Zmin: -1
   Zmax: 9999
   zAngle: 90

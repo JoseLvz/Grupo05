@@ -24,6 +24,7 @@ public class MainMenu_Controller : MonoBehaviour {
         StartCoroutine(ChangeEscene());
         FindObjectOfType<AudioManager>().StopVFX("Theme");
         FindObjectOfType<AudioManager>().Play("Motor");
+        FindObjectOfType<AudioManager>().PlaySong();
 
     }
 
@@ -31,6 +32,7 @@ public class MainMenu_Controller : MonoBehaviour {
     {
         SceneManager.LoadScene("Tutorial");
         FindObjectOfType<AudioManager>().StopVFX("Theme");
+        FindObjectOfType<AudioManager>().PlaySong();
     }
 
     IEnumerator ChangeEscene()

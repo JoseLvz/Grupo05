@@ -76,6 +76,11 @@ public class Nave : MonoBehaviour {
             DeadState();
         }
 
+        if (life > 3)
+        {
+            life = 3;
+        }
+
         EndGame();
     }
 
