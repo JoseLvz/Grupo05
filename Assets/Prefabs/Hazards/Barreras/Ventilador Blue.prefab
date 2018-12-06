@@ -141,5 +141,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeedRotation: 9
   Direction: 1
-  damageDeal: 1
+  damageDeal: 2
   nave: {fileID: 0}
