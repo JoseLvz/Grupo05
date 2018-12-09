@@ -57,7 +57,7 @@ MonoBehaviour:
     volume: 0.4
     speed: -0.3
     Space3D: 0.275
-    Distancia_Rango: 3.53
+    Distancia_Rango: 2.02
     MaxRango: 0
     loop: 1
     source: {fileID: 0}
@@ -106,11 +106,21 @@ MonoBehaviour:
     MaxRango: 0
     loop: 0
     source: {fileID: 0}
+  - Name: PauseSFX
+    clip: {fileID: 8300000, guid: 94a98802ddd0c9c488633b3a07a5211e, type: 3}
+    volume: 1
+    speed: 1
+    Space3D: 0
+    Distancia_Rango: 0
+    MaxRango: 0
+    loop: 0
+    source: {fileID: 0}
   source2: {fileID: 0}
   music:
   - {fileID: 8300000, guid: 08d94d0cb57f26c46a48d10d10798f41, type: 3}
-  - {fileID: 8300000, guid: 06be7af9ce2e2844885443ed7f24a1b0, type: 3}
+  - {fileID: 8300000, guid: ed9a2fe743b37b94dbf8c0c412095c2a, type: 3}
   - {fileID: 8300000, guid: 585edbbbacb3bd645ac2c63fbb89598c, type: 3}
   - {fileID: 8300000, guid: b6ae01b1fdbce04449264d3934458537, type: 3}
   - {fileID: 8300000, guid: f4a51113ea5a34a4d89a4881630cce11, type: 3}
+  - {fileID: 8300000, guid: 6af14eae135ed704dbdde7097067f8d1, type: 3}
   volume: 0.5

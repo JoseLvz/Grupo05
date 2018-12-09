@@ -8,25 +8,25 @@ public class EndGameActivation : MonoBehaviour {
 
     public Nave nave;
     public Image Transition;
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    private void OnTriggerEnter(Collider other)
+    public int levelToUnlock=2;
+
+    void Start()
     {
-        if (other.gameObject.CompareTag("nonPlayer"))
-        {
-            nave.endGame= true;
-            StartCoroutine(Level1());
+        nave = FindObjectOfType<Nave>();
+        
+}
+
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.CompareTag("nonPlayer")){
+            PlayerPrefs.SetInt("levelDoned", levelToUnlock);
+            nave.endGame = true;
+            StartCoroutine(NextLevel());
         }
     }
+   
 
-    IEnumerator Level1()
+    IEnumerator NextLevel()
     {
         Transition.canvasRenderer.SetAlpha(0.0f);
 
@@ -36,13 +36,9 @@ public class EndGameActivation : MonoBehaviour {
         //FadeOut();
     }
 
+
     void FadeIn()
     {
         Transition.CrossFadeAlpha(1.0f, 1.5f, false);
-    }
-
-    void FadeOut()
-    {
-        Transition.CrossFadeAlpha(0.0f, 1.5f, false);
     }
 }

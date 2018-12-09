@@ -10,23 +10,22 @@ public class MainMenu_Controller : MonoBehaviour {
     public Button button;
 
 
-
     void Start()
     {
         button.Select();
         FindObjectOfType<AudioManager>().Play("Theme");
+
+
     }
 
-
-    public void PlayGame()
+    public void LevelToLoad(int level)
     {
-        SceneManager.LoadScene("Level1");
-        StartCoroutine(ChangeEscene());
-        FindObjectOfType<AudioManager>().StopVFX("Theme");
+        SceneManager.LoadScene(level);
         FindObjectOfType<AudioManager>().Play("Motor");
+        FindObjectOfType<AudioManager>().StopVFX("Theme");
         FindObjectOfType<AudioManager>().PlaySong();
-
     }
+
 
     public void PlayTutorial()
     {

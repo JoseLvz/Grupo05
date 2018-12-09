@@ -45,15 +45,16 @@ public class AudioManager : MonoBehaviour {
             Audio.source.spatialBlend = Audio.Space3D;
             Audio.source.dopplerLevel = Audio.Distancia_Rango;
             Audio.source.loop = Audio.loop;
-        }
 
+
+        }
 
         source2 = gameObject.AddComponent<AudioSource>();
         source2.volume = volume;
 
 
-
     }
+
 
 
     public void Play(string name)
