@@ -41,4 +41,5 @@ public class GameController : MonoBehaviour {
     {
         transition.CrossFadeAlpha(1.0f, 1.5f, false);
     }
+
 }
