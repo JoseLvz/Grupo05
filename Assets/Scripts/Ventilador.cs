@@ -9,6 +9,7 @@ public class Ventilador : MonoBehaviour {
     public int Direction;
     public int damageDeal;
 
+
     public Nave nave;
 
 	void Start () {

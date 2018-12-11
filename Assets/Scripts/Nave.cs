@@ -124,7 +124,6 @@ public class Nave : MonoBehaviour {
         if (col.gameObject.CompareTag("Hazzard")){
             life -= 1;
             cam.shake = true;
-            BackColliders();
             FindObjectOfType<AudioManager>().Play("Impact_Meteor");
         }
         StartCoroutine(BackColliders());
@@ -141,7 +140,13 @@ public class Nave : MonoBehaviour {
         StartCoroutine(BackColliders());
     }
 
-    IEnumerator BackColliders()
+    public void TakeColliders()
+    {
+        allColliders.gameObject.SetActive(false);
+        StartCoroutine(BackColliders());
+    }
+
+    public IEnumerator BackColliders()
     {
         yield return new WaitForSeconds(0.7f);
         allColliders.gameObject.SetActive(true);
