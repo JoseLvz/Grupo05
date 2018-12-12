@@ -67,6 +67,7 @@ public class MenuManager : MonoBehaviour {
 
     public void RestartGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FindObjectOfType<AudioManager>().Play("Motor");
     }
 
     public void BackToMenu(){

@@ -5357,7 +5357,7 @@ Prefab:
     - target: {fileID: 114113840258530586, guid: 7764ecad401f07348b83ca898185df86,
         type: 2}
       propertyPath: levelToUnlock
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764ecad401f07348b83ca898185df86, type: 2}

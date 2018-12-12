@@ -9,17 +9,20 @@ public class EndGameActivation : MonoBehaviour {
     public Nave nave;
     public Image Transition;
 
-    public int levelToUnlock=2;
+    int levelToUnlock;
 
     void Start()
     {
         nave = FindObjectOfType<Nave>();
+        levelToUnlock = SceneManager.GetActiveScene().buildIndex;
+        
         
 }
 
     void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag("nonPlayer")){
             PlayerPrefs.SetInt("levelDoned", levelToUnlock);
+            Debug.Log("i'm on " + levelToUnlock);
             nave.endGame = true;
             StartCoroutine(NextLevel());
         }

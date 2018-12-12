@@ -9,18 +9,19 @@ public class LevelUnlocker : MonoBehaviour {
 
 
 	void Start () {
-        levelDoned = PlayerPrefs.GetInt("levelDoned", 1);
-	}
-	
-	void Update () {
 
-        for (int i = 0; i <levelUnlocked.Length; i++)
+        levelDoned = PlayerPrefs.GetInt("levelDoned");
+
+        for (int i = 0; i < levelUnlocked.Length; i++)
         {
-            if(i > levelDoned)
+            if (i+1 < levelDoned)
             {
                 levelUnlocked[i].SetActive(false);
             }
         }
-	}
 
+        Debug.Log(levelDoned);
+    }
 }
+
+
