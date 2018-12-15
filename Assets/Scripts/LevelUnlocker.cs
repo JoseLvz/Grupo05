@@ -9,7 +9,7 @@ public class LevelUnlocker : MonoBehaviour {
 
 
 	void Start () {
-
+        levelDoned = 1;
         levelDoned = PlayerPrefs.GetInt("levelDoned");
 
         for (int i = 0; i < levelUnlocked.Length; i++)

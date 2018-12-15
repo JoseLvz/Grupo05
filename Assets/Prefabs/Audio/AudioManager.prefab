@@ -119,8 +119,8 @@ MonoBehaviour:
   music:
   - {fileID: 8300000, guid: 08d94d0cb57f26c46a48d10d10798f41, type: 3}
   - {fileID: 8300000, guid: ed9a2fe743b37b94dbf8c0c412095c2a, type: 3}
-  - {fileID: 8300000, guid: 585edbbbacb3bd645ac2c63fbb89598c, type: 3}
+  - {fileID: 8300000, guid: 829436fde51912c4a8b3dbc5346eb2a6, type: 3}
   - {fileID: 8300000, guid: b6ae01b1fdbce04449264d3934458537, type: 3}
-  - {fileID: 8300000, guid: f4a51113ea5a34a4d89a4881630cce11, type: 3}
+  - {fileID: 8300000, guid: bbd88e5bba85cf44683af1cd6f639cc1, type: 3}
   - {fileID: 8300000, guid: 6af14eae135ed704dbdde7097067f8d1, type: 3}
   volume: 0.5

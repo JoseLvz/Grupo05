@@ -31,10 +31,11 @@ public class GameController : MonoBehaviour {
 
     IEnumerator MenuAwake()
     {
-        yield return new WaitForSeconds(40f);
+        yield return new WaitForSeconds(70f);
         FadeIn();
-        SceneManager.LoadScene("Menu");
         FindObjectOfType<AudioManager>().Pause();
+        SceneManager.LoadScene("Menu");
+
     }
 
     void FadeIn()

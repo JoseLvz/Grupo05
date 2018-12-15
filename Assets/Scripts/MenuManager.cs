@@ -74,6 +74,7 @@ public class MenuManager : MonoBehaviour {
         Time.timeScale = 1f;
         AudioListener.pause = false;
         SceneManager.LoadScene("Menu");
+        FindObjectOfType<AudioManager>().Pause();
         FindObjectOfType<AudioManager>().StopVFX("Motor");
 
     }
