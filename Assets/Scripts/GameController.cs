@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     int sceneIndex;
-    int requirement = 5;
+    int requirement = 7;
     public Image transition;
 
     private void Start()
