@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cinematica : MonoBehaviour {
 
-    public GameObject cam1, cam2, cam3;
+    public GameObject cam1, cam2, cam3,cam4,cam5;
 
 	void Start () {
 
@@ -15,12 +15,17 @@ public class Cinematica : MonoBehaviour {
     IEnumerator cinematica()
     {
         cam1.SetActive(true);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
         cam2.SetActive(true);
         cam1.SetActive(false);
         yield return new WaitForSeconds(6f);
         cam3.SetActive(true);
         cam2.SetActive(false);
-
+        yield return new WaitForSeconds(5f);
+        cam3.SetActive(false);
+        cam4.SetActive(true);
+        yield return new WaitForSeconds(6f);
+        cam4.SetActive(false);
+        cam5.SetActive(true);
     }   
 }
