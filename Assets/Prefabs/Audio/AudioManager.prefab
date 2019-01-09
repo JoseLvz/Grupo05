@@ -54,10 +54,10 @@ MonoBehaviour:
   Sounds:
   - Name: Motor
     clip: {fileID: 8300000, guid: 7f706f3f5e8fc974c9a4fdb06920a637, type: 3}
-    volume: 0.4
+    volume: 0.3
     speed: -0.3
-    Space3D: 0.275
-    Distancia_Rango: 2.02
+    Space3D: 0.1
+    Distancia_Rango: 0
     MaxRango: 0
     loop: 1
     source: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f3361c23b6dc38b43a5004ef8b54006c, type: 3}
     volume: 1
     speed: 1
-    Space3D: 0.316
+    Space3D: 0.55
     Distancia_Rango: 1.61
     MaxRango: 0
     loop: 0

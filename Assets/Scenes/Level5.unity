@@ -122,15 +122,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4496346017521416, guid: 7764ecad401f07348b83ca898185df86, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.91
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 4496346017521416, guid: 7764ecad401f07348b83ca898185df86, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.06
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 4496346017521416, guid: 7764ecad401f07348b83ca898185df86, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4457.7
+      value: 4448.3
       objectReference: {fileID: 0}
     - target: {fileID: 4496346017521416, guid: 7764ecad401f07348b83ca898185df86, type: 2}
       propertyPath: m_LocalRotation.x
@@ -197,6 +197,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764ecad401f07348b83ca898185df86, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &8345597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4496346017521416, guid: 7764ecad401f07348b83ca898185df86,
+    type: 2}
+  m_PrefabInternal: {fileID: 8345596}
 --- !u!1001 &27265090
 Prefab:
   m_ObjectHideFlags: 0
@@ -9730,7 +9735,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289120537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: -300}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9748,7 +9753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1910611165}
-  endPos: {fileID: 0}
+  endPos: {fileID: 8345597}
   shake: 0
   cd: 0.419
   RangeX: 0.054
@@ -13847,6 +13852,11 @@ Prefab:
     - target: {fileID: 4494620945099930, guid: c8827d1d207592244b55359e4d0ab225, type: 2}
       propertyPath: m_RootOrder
       value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 114381251141603146, guid: c8827d1d207592244b55359e4d0ab225,
+        type: 2}
+      propertyPath: Sounds.Array.data[0].Distancia_Rango
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8827d1d207592244b55359e4d0ab225, type: 2}

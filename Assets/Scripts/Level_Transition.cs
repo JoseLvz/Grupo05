@@ -10,10 +10,10 @@ public class Level_Transition : MonoBehaviour {
 
     IEnumerator Start()
     {
-        Transition.canvasRenderer.SetAlpha(1.0f);
+        Transition.canvasRenderer.SetAlpha(0.9f);
 
         //FadeIn();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         FadeOut();
     }
 	
