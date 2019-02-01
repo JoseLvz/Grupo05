@@ -8,6 +8,7 @@ public class Camera_Movement : MonoBehaviour {
     /*public float smoothSpeed = 0.125f;
     public Vector3 offset;*/
     public bool shake;
+    public bool shake2;
     private float timer;
 
 
@@ -19,6 +20,17 @@ public class Camera_Movement : MonoBehaviour {
 
     [Range(0.01f, 0.50f)]
     public float rangeY;
+    //--------------------- new shake -------------//
+
+    [Range(0.01f, 0.30f)]
+    public float RangeX2;
+
+    [Range(0.01f, 0.30f)]
+    public float rangeY2;
+
+
+
+
     //new movement
     Vector3 defaultDistance = new Vector3(0, 1.1f, -10f);
     public Vector3 velocity = Vector3.one;
@@ -47,6 +59,7 @@ public class Camera_Movement : MonoBehaviour {
         if(nave.isDead == false){
             Follow();
             CamShake();
+            CamShake2();
         }
 
     }
@@ -71,6 +84,29 @@ public class Camera_Movement : MonoBehaviour {
             timer = 0f;
         }
     }
+
+    void CamShake2()
+    {
+        if (shake2)
+        {
+            Vector3 cp = cam.position;
+
+            cp.x += Random.Range(-RangeX2, RangeX2);
+            cp.y += Random.Range(-rangeY2, rangeY2);
+
+            cam.position = cp;
+
+            timer += Time.deltaTime;
+        }
+
+        if (timer >= cd)
+        {
+            shake = false;
+            timer = 1f;
+        }
+    }
+
+
 
 
     void Follow()
@@ -101,7 +137,4 @@ public class Camera_Movement : MonoBehaviour {
             transform.rotation = endPos.rotation;
         }
     }
-
-
-
 }

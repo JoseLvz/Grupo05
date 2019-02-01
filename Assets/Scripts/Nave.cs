@@ -11,8 +11,6 @@ public class Nave : MonoBehaviour {
     float V_Movement;
     public float Xmin, Xmax, Ymin, Ymax , Zmin , Zmax;
     public float zAngle = 90;
-
-
     
 
     Rigidbody Rig;
@@ -24,6 +22,7 @@ public class Nave : MonoBehaviour {
     public bool endGame;
 
     public Transform allColliders;
+    public Transform Follower;
 
     public Camera_Movement cam;
     Vector3 randomRotation;
@@ -44,7 +43,7 @@ public class Nave : MonoBehaviour {
         isDead = false;
         endGame = false;
         Rig = GetComponent<Rigidbody>();
-        InvokeRepeating("Acceleration",1,6);
+        //InvokeRepeating("Acceleration",1,6);
         Physics.IgnoreLayerCollision(9, 10);
 
         H_movement = Input.GetAxis("Horizontal");
@@ -69,7 +68,8 @@ public class Nave : MonoBehaviour {
         {
             Movement();
             Rotate();
-            Limits();
+            Distance();
+            //Limits();
         }
         else
         {
@@ -85,7 +85,7 @@ public class Nave : MonoBehaviour {
     }
 
     public void Movement() {
-        transform.Translate(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,Zspeed*Time.deltaTime);
+        transform.Translate(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,0/*Zspeed*Time.deltaTime*/);
         //Rig.velocity = M * speed * Time.deltaTime;
         //Rig.position += new Vector3(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,Zspeed*Time.deltaTime);
     }
@@ -94,11 +94,37 @@ public class Nave : MonoBehaviour {
         Rig.position = new Vector3(Mathf.Clamp(Rig.position.x, Xmin, Xmax), Mathf.Clamp(Rig.position.y, Ymin, Ymax), Mathf.Clamp(Rig.position.z, Zmin, Zmax));
     }
 
-    public void Acceleration(){
+    void Distance()
+    {
+        float distance = Vector3.Distance(transform.position, Follower.position);
+
+        if(distance >= 7.5f)
+        {
+            speed = 1f;
+            InvokeRepeating("IsOut", 4.5f, 3);
+            cam.shake2 = true;
+        }
+        else if (distance < 7.5f)
+        {
+            speed = 3.2f;
+            CancelInvoke("IsOut");
+            cam.shake2 = false;
+        }
+    }
+
+    void IsOut()
+    {
+        life--;
+    }
+
+
+
+    /*public void Acceleration(){
         if (isDead == false){
             Zspeed++;
         }
-    }
+    }*/
+
     void DeadState(){
         life = 0;
         isDead = true;
@@ -106,7 +132,7 @@ public class Nave : MonoBehaviour {
         transform.Rotate(randomRotation * Time.deltaTime);
         FindObjectOfType<AudioManager>().Play("Lose");
 
-        Rig.AddForce(0, 0, 0.0005f, ForceMode.Impulse);
+        //Rig.AddForce(0.005f,0.005f, 0.005f, ForceMode.Impulse);
         allColliders.gameObject.SetActive(false);
         FindObjectOfType<AudioManager>().StopVFX("Motor");
 
