@@ -8,6 +8,7 @@ TagManager:
   - Barrier
   - nonPlayer
   - Aspa
+  - e
   layers:
   - Default
   - TransparentFX

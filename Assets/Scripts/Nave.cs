@@ -5,7 +5,7 @@ using UnityEngine;
 public class Nave : MonoBehaviour {
 
     float speed = 3.2f;
-    public float Zspeed;
+    //public float Zspeed;
     public int life=3;
     float H_movement;
     float V_Movement;
@@ -21,14 +21,21 @@ public class Nave : MonoBehaviour {
     public bool isDead;
     public bool endGame;
 
+    bool eletricityIsOn;
+    //bool canCreate;
+
     public Transform allColliders;
     public Transform Follower;
+    public Transform target;
+
+    public GameObject deathEffect;
 
     public Camera_Movement cam;
     Vector3 randomRotation;
 
     bool isPause;
     float RotationSpeed = 50f;
+    float Timer;
 
     private void Awake()
     {
@@ -69,11 +76,13 @@ public class Nave : MonoBehaviour {
             Movement();
             Rotate();
             Distance();
+            //Electric();
             //Limits();
         }
         else
         {
             DeadState();
+            Electricity();
         }
 
         if (life > 3)
@@ -84,15 +93,16 @@ public class Nave : MonoBehaviour {
         EndGame();
     }
 
+
     public void Movement() {
         transform.Translate(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,0/*Zspeed*Time.deltaTime*/);
         //Rig.velocity = M * speed * Time.deltaTime;
         //Rig.position += new Vector3(H_movement*Time.deltaTime*speed,V_Movement*Time.deltaTime*speed,Zspeed*Time.deltaTime);
     }
 
-    public void Limits(){
+    /*public void Limits(){
         Rig.position = new Vector3(Mathf.Clamp(Rig.position.x, Xmin, Xmax), Mathf.Clamp(Rig.position.y, Ymin, Ymax), Mathf.Clamp(Rig.position.z, Zmin, Zmax));
-    }
+    }*/
 
     void Distance()
     {
@@ -102,12 +112,14 @@ public class Nave : MonoBehaviour {
         {
             speed = 1f;
             InvokeRepeating("IsOut", 4.5f, 3);
+            Electricity();
             cam.shake2 = true;
         }
         else if (distance < 7.5f)
         {
             speed = 3.2f;
             CancelInvoke("IsOut");
+            Destroy(GameObject.FindGameObjectWithTag("e"));
             cam.shake2 = false;
         }
     }
@@ -117,6 +129,20 @@ public class Nave : MonoBehaviour {
         life--;
     }
 
+    /*void Electric()
+    {
+        if (eletricityIsOn== true && canCreate == true)
+        {
+            Instantiate(deathEffect, transform.position, transform.rotation);
+            canCreate = false;
+        }
+        else if (eletricityIsOn == false)
+        {
+            canCreate = true;
+        }
+          
+    }*/
+
 
 
     /*public void Acceleration(){
@@ -124,6 +150,21 @@ public class Nave : MonoBehaviour {
             Zspeed++;
         }
     }*/
+
+
+    void Electricity()
+    {
+        Timer -= Time.deltaTime;
+        if (Timer <= 0f)
+        {
+            Instantiate(deathEffect, transform.position, transform.rotation, transform.parent);
+            Timer = 1f;
+        }
+        else if (Timer >= 1f)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("e"));
+        }
+    }
 
     void DeadState(){
         life = 0;
@@ -142,6 +183,7 @@ public class Nave : MonoBehaviour {
         if (endGame == true)
         {
             Rig.AddForce(0, 0, 1, ForceMode.Impulse);
+            //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 30 * Time.deltaTime);
         }
     }
 

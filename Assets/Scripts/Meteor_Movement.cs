@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Meteor_Movement : MonoBehaviour {
 
-    float Rotation = 50f;
+    float Rotation = 30f;
 
     Transform thistransform;
     Vector3 randomRotation;

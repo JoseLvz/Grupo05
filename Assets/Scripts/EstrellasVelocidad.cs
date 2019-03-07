@@ -22,6 +22,7 @@ public class EstrellasVelocidad : MonoBehaviour {
 
 		Vector3 Pos = target.position + DistancePos;
 		transform.position = Pos;
+        
 	}
 
 
