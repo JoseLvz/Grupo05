@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0029623082, g: 0.008761557, b: 0.037782367, a: 1}
+  m_IndirectSpecularColor: {r: 0.0029623082, g: 0.008761496, b: 0.03778355, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3130,15 +3130,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4494620945099930, guid: c8827d1d207592244b55359e4d0ab225, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4494620945099930, guid: c8827d1d207592244b55359e4d0ab225, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4494620945099930, guid: c8827d1d207592244b55359e4d0ab225, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4494620945099930, guid: c8827d1d207592244b55359e4d0ab225, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3334,6 +3334,20 @@ Prefab:
       propertyPath: Follower
       value: 
       objectReference: {fileID: 228567191}
+    - target: {fileID: 114771105991754654, guid: de71e61f1851b084fbf9f80b32d2523d,
+        type: 2}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1544755753147034, guid: 52d8d8722ab2c214cb7e8b55bb1290a6,
+        type: 2}
+    - target: {fileID: 1876074205927992, guid: de71e61f1851b084fbf9f80b32d2523d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335209209979416, guid: de71e61f1851b084fbf9f80b32d2523d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de71e61f1851b084fbf9f80b32d2523d, type: 2}
   m_IsPrefabAsset: 0
