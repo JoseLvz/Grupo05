@@ -10,6 +10,7 @@ public class ChangeForm : MonoBehaviour {
     public MeshCollider C_Collider;
     public SphereCollider S_remplazo;
     public GameObject T_remplazo;
+    public Nave nave;
 
     //public GameObject[] Effetcs;
 
@@ -36,15 +37,16 @@ public class ChangeForm : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !nave.isDead && !MenuManager.gameIsPaused)
         {
+            SwitchShip();
             if (selectedCharacter < 4)
                 selectedCharacter++;
-                i++;
+                //i++;
 
-
+                
         }
-        SwitchShip();
+        
     }
 
     public void SwitchShip()

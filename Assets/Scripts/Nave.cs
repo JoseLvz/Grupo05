@@ -159,6 +159,7 @@ public class Nave : MonoBehaviour {
         {
             Instantiate(deathEffect, transform.position, transform.rotation, transform.parent);
             Timer = 1f;
+            
         }
         else if (Timer >= 1f)
         {

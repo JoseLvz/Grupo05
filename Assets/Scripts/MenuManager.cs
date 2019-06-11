@@ -22,15 +22,16 @@ public class MenuManager : MonoBehaviour {
             DefeatMenuUI.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !nave.isDead)
         {
-            if (gameIsPaused)
+            if (!gameIsPaused)
             {
-                Resume();
+               
+                Pause();
             }
             else
             {
-                Pause();
+                Resume();
 
             }
         }
