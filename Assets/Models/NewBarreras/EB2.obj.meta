@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 26164b234303d484c985bb0d90acdbae
+guid: 3605e5df1b3e19e43a8a462b54e652a0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: CCollider
-    100002: //RootNode
-    400000: CCollider
-    400002: //RootNode
-    2100000: CColliderMat
-    2300000: CCollider
-    3300000: CCollider
-    4300000: CCollider
+    100000: //RootNode
+    100002: Ebarrier2
+    400000: //RootNode
+    400002: Ebarrier2
+    2100000: Ebarrier2Mat
+    2300000: Ebarrier2
+    3300000: Ebarrier2
+    4300000: Ebarrier2
   externalObjects: {}
   materials:
     importMaterials: 1
