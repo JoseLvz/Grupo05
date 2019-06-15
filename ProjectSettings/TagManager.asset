@@ -9,6 +9,7 @@ TagManager:
   - nonPlayer
   - Aspa
   - e
+  - scorem
   layers:
   - Default
   - TransparentFX

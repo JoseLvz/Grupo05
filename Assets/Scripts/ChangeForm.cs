@@ -27,8 +27,8 @@ public class ChangeForm : MonoBehaviour {
         Nave.gameObject.SetActive(true);
         Nave2.gameObject.SetActive(false);
         Nave3.gameObject.SetActive(false);
-        C_Collider.gameObject.SetActive(false);
-        S_remplazo.gameObject.SetActive(true);
+        C_Collider.gameObject.SetActive(true);
+        S_remplazo.gameObject.SetActive(false);
         T_remplazo.gameObject.SetActive(false);
 
         //particle.GetComponent<ParticleSystem>().enableEmission = true;
@@ -58,6 +58,7 @@ public class ChangeForm : MonoBehaviour {
                 //cubo.Emit(1);
                 Nave.gameObject.SetActive(false);
                 Nave2.gameObject.SetActive(true);
+                C_Collider.gameObject.SetActive(false);
                 S_remplazo.gameObject.SetActive(true);
                 break;
             case 2:

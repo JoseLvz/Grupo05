@@ -22,7 +22,7 @@ public class Follower : MonoBehaviour {
         //PathFollow = GameObject.Find(pathName).GetComponent<PathFollowCreator>();
         last_position = transform.position;
 
-        InvokeRepeating("F_aceleration", 1, 6);
+        InvokeRepeating("F_aceleration", 1, 4);
     }
 
     void Update()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour {
 
-    float speed = 3.2f;
+    float speed = 3.5f;
     //public float Zspeed;
     public int life=3;
     float H_movement;

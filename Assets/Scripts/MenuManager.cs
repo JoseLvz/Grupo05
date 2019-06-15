@@ -12,11 +12,15 @@ public class MenuManager : MonoBehaviour {
     public GameObject Ranking, nameDialog;
     public HighScoreManager scoreManager;
 
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 
     void Start()
     {
         nave = GameObject.FindWithTag("Player").GetComponent<Nave>();
+        scoreManager = GameObject.FindWithTag("scorem").GetComponent<HighScoreManager>();
     }
 
     void Update()
