@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4548257525934068}
   - component: {fileID: 33520152589254666}
   - component: {fileID: 23379500545712240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ebarrier1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,9 +36,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4552337432048956}
-  m_Layer: 0
+  - component: {fileID: 64506553156833598}
+  m_Layer: 10
   m_Name: EB1
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506867199993052}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -174.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4548257525934068}
@@ -111,4 +112,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457719761085304}
+  m_Mesh: {fileID: 4300000, guid: dd89604e16702e84dbc47b8ebfc3d0c6, type: 3}
+--- !u!64 &64506553156833598
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506867199993052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: dd89604e16702e84dbc47b8ebfc3d0c6, type: 3}

@@ -7,8 +7,8 @@ public class ChangeForm : MonoBehaviour {
     int i = 1;
     string characterName;
     public GameObject Nave, Nave2, Nave3;
-    public MeshCollider C_Collider;
-    public SphereCollider S_remplazo;
+    public GameObject C_Collider;
+    public MeshCollider S_remplazo;
     public GameObject T_remplazo;
     public Nave nave;
 

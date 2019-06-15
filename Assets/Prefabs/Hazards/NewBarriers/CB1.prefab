@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4549961648177458}
   - component: {fileID: 33020428132297904}
   - component: {fileID: 23767905049319826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cbarrier4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,9 +36,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4722086866141448}
-  m_Layer: 0
+  - component: {fileID: 64652996760644074}
+  - component: {fileID: 114764768819629656}
+  m_Layer: 10
   m_Name: CB1
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470668994203804}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4549961648177458}
@@ -112,3 +114,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1427336190027466}
   m_Mesh: {fileID: 4300000, guid: 510cbbedfc926f4489a41d94ad490140, type: 3}
+--- !u!64 &64652996760644074
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470668994203804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 510cbbedfc926f4489a41d94ad490140, type: 3}
+--- !u!114 &114764768819629656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470668994203804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa7d0bc4f605034a89af580ca919c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedFail: {fileID: 2100000, guid: da623f64ad2adf94d8d9e583360bc6a9, type: 2}
+  Barrier: {fileID: 1470668994203804}
