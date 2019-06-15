@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour {
     public static bool gameIsPaused = false;
     public GameObject PauseUI;
     Nave nave;
+    public GameObject Ranking, nameDialog;
+    public HighScoreManager scoreManager;
+
+
 
     void Start()
     {
@@ -17,9 +21,13 @@ public class MenuManager : MonoBehaviour {
 
     void Update()
     {
-        //Lo que hace aparecer el menu
         if (nave.isDead == true){
             DefeatMenuUI.SetActive(true);
+            scoreManager.isOver = true;
+        }
+        if(gameIsPaused==true)
+            {
+            scoreManager.isOver = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && !nave.isDead)
@@ -78,6 +86,13 @@ public class MenuManager : MonoBehaviour {
         FindObjectOfType<AudioManager>().Pause();
         FindObjectOfType<AudioManager>().StopVFX("Motor");
 
+    }
+    
+    public void EnterScore()
+    {
+        Ranking.SetActive(true);
+        nameDialog.SetActive(true);
+        DefeatMenuUI.SetActive(false);
     }
 
 
