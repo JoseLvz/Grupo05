@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class HighScoreManager : MonoBehaviour {
 
     //[HideInInspector]
-    private int myScore;
+    public int showScore;
     public bool isOver;
     private string connectionString;
     private List<HighScore> highScores = new List<HighScore>();
@@ -20,21 +20,24 @@ public class HighScoreManager : MonoBehaviour {
     public Text enterName;
     public GameObject nameDialog;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
 
     void Start () {
+        
         connectionString = "URI=file:" + Application.dataPath + "/Resources/Database/HighScoreDB.db";
         DeleteExtraScore();
         //ShowScores();
 	}
 	
 	void Update () {
-		if(!isOver)
+        if (!isOver)
         {
-            myScore++;
+            Score.myScore++;
+            showScore = Score.myScore;
+
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            EmptyScores();
         }
 	}
     
@@ -42,7 +45,7 @@ public class HighScoreManager : MonoBehaviour {
     {
         if(enterName.text != string.Empty)
         {
-            InsertScore(enterName.text, myScore);
+            InsertScore(enterName.text, Score.myScore);
             enterName.text = string.Empty;
             nameDialog.SetActive(false);
             ShowScores();
@@ -161,6 +164,23 @@ public class HighScoreManager : MonoBehaviour {
                     dbConnection.Close();
                 }
             }
+        }
+    }
+
+    public void EmptyScores()
+    {
+        GetScore();
+        
+        using (IDbConnection dbConnection = new SqliteConnection(connectionString))
+        {
+            dbConnection.Open();
+
+            using (IDbCommand dbCmd = dbConnection.CreateCommand())
+            {
+                dbCmd.CommandText = "DELETE FROM HighScores";
+                dbCmd.ExecuteScalar();
+            }
+            dbConnection.Close();
         }
     }
 }

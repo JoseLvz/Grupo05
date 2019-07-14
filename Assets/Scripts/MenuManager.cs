@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour {
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+       
     }
 
     void Start()

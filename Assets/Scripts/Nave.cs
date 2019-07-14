@@ -85,10 +85,10 @@ public class Nave : MonoBehaviour {
             Electricity();
         }
 
-        if (life > 3)
+        /*if (life > 3)
         {
             life = 3;
-        }
+        }*/
 
         EndGame();
     }
