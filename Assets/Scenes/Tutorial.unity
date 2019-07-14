@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003000597, g: 0.008803941, b: 0.038182274, a: 1}
+  m_IndirectSpecularColor: {r: 0.003000597, g: 0.008804, b: 0.038181145, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a6a3ccd01d3f448a4caf20baaa97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nave: {fileID: 0}
+  nave: {fileID: 737240834}
   Transition: {fileID: 238793463}
 --- !u!1001 &194860690
 PrefabInstance:
@@ -5303,6 +5303,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1265884529206088, guid: 20304b622268b644883af9f21ef977ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224472284910656484, guid: 20304b622268b644883af9f21ef977ab,
         type: 3}
       propertyPath: m_RootOrder
@@ -5408,10 +5412,6 @@ PrefabInstance:
       propertyPath: nameDialog
       value: 
       objectReference: {fileID: 534906152}
-    - target: {fileID: 1265884529206088, guid: 20304b622268b644883af9f21ef977ab, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114959062907785617, guid: 20304b622268b644883af9f21ef977ab,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
