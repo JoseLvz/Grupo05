@@ -24,6 +24,7 @@ public class EndGameActivation : MonoBehaviour {
             PlayerPrefs.SetInt("levelDoned", levelToUnlock);
             Debug.Log("i'm on " + levelToUnlock);
             nave.endGame = true;
+            MenuManager.SetScore();
             StartCoroutine(NextLevel());
         }
     }
@@ -32,7 +33,7 @@ public class EndGameActivation : MonoBehaviour {
     IEnumerator NextLevel()
     {
         Transition.canvasRenderer.SetAlpha(0.0f);
-
+        
         FadeIn();
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

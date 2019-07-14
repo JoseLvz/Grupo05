@@ -27,8 +27,8 @@ public class HighScoreManager : MonoBehaviour {
         DeleteExtraScore();
         //ShowScores();
 	}
-	
-	void Update () {
+
+    void Update () {
         if (!isOver)
         {
             Score.myScore++;

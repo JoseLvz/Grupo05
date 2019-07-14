@@ -6,7 +6,7 @@ public class Nave : MonoBehaviour {
 
     float speed = 3.5f;
     //public float Zspeed;
-    public int life=3;
+    public int life=999999;
     float H_movement;
     float V_Movement;
     public float Xmin, Xmax, Ymin, Ymax , Zmin , Zmax;

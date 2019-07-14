@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour {
     Nave nave;
     public GameObject Ranking, nameDialog;
     public HighScoreManager scoreManager;
+    private static int lastScore;
 
     private void Awake()
     {
@@ -78,8 +79,9 @@ public class MenuManager : MonoBehaviour {
         FindObjectOfType<AudioManager>().StopVFX("Motor");*/
     }
 
-    public void RestartGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    public void RestartGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        Score.myScore = 0 + lastScore;
         FindObjectOfType<AudioManager>().Play("Motor");
     }
 
@@ -90,6 +92,11 @@ public class MenuManager : MonoBehaviour {
         FindObjectOfType<AudioManager>().Pause();
         FindObjectOfType<AudioManager>().StopVFX("Motor");
 
+    }
+
+    public static void SetScore()
+    {
+        lastScore = Score.myScore;
     }
     
     public void EnterScore()
