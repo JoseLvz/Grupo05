@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1408361170670332554}
   m_Layer: 0
   m_Name: HighScoreManager
-  m_TagString: Untagged
+  m_TagString: scorem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1199fc87e76ae4cae5d781a2d76576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showScore: 0
   isOver: 0
   scorePrefab: {fileID: 1463063746212214, guid: 65bd213545efbd044ab88a930931b9b5,
     type: 3}
